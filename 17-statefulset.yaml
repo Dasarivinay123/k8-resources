@@ -8,7 +8,7 @@ spec:
   ports:
   - port: 80
     name: web
-  clusterIP: None # headless service
+  clusterIP: None #Headless service
   selector:
     app: nginx
 ---
@@ -36,7 +36,7 @@ spec:
         volumeMounts:
         - name: www
           mountPath: /usr/share/nginx/html
-  # PVC
+ #PVC
   volumeClaimTemplates:
   - metadata:
       name: www
